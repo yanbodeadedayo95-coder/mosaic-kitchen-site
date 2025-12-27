@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mosaic Kitchen — Reserve a table</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo">Mosaic Kitchen</h1>
+        <p class="tagline">Reserve a table — dinner starts here.</p>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reserve">Reserve</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner container">
+        <h2>African roots. Global plates.</h2>
+        <p class="lead">Seasonal ingredients. Bold, balanced flavors. Welcome to Mosaic Kitchen.</p>
+        <a class="btn" href="#reserve">Reserve a Table</a>
+      </div>
+    </section>
+
+    <section id="menu" class="container menu-section">
+      <h2>Featured Dishes</h2>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1200&auto=format&fit=crop" alt="Grilled fish with sides">
+          <div class="card-body">
+            <h3>Grilled Suya Salmon</h3>
+            <p class="muted">Charred salmon with West African suya spice, citrus slaw.</p>
+            <div class="meta"><span class="price">$18.50</span><span class="tag">Main</span></div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" alt="Mushroom risotto">
+          <div class="card-body">
+            <h3>Truffle Mushroom Risotto</h3>
+            <p class="muted">Creamy arborio, local mushrooms, parmesan crumble.</p>
+            <div class="meta"><span class="price">$15.00</span><span class="tag">Main</span></div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Caprese salad">
+          <div class="card-body">
+            <h3>Tomato & Mozzarella Mosaic</h3>
+            <p class="muted">Heirloom tomatoes, buffalo mozzarella, basil oil, balsamic.</p>
+            <div class="meta"><span class="price">$9.50</span><span class="tag">Starter</span></div>
+          </div>
+        </article>
+
+        <!-- additional static cards for starter menu (you can edit later) -->
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1516685304081-de7947d419d0?q=80&w=1200&auto=format&fit=crop" alt="Charred broccolini">
+          <div class="card-body">
+            <h3>Charred Broccolini</h3>
+            <p class="muted">Lemon, chili flakes and olive oil.</p>
+            <div class="meta"><span class="price">$7.00</span><span class="tag">Sides</span></div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1541542684-6e0b03adf5aa?q=80&w=1200&auto=format&fit=crop" alt="Chocolate dessert">
+          <div class="card-body">
+            <h3>Dark Chocolate Panna Cotta</h3>
+            <p class="muted">Silky panna cotta with cocoa crumble.</p>
+            <div class="meta"><span class="price">$6.50</span><span class="tag">Dessert</span></div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="https://images.unsplash.com/photo-1541542684-6e0b03adf5aa?q=80&w=1200&auto=format&fit=crop" alt="Cocktail">
+          <div class="card-body">
+            <h3>House Old Fashioned</h3>
+            <p class="muted">Bourbon, house bitters, orange.</p>
+            <div class="meta"><span class="price">$10.00</span><span class="tag">Drinks</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1516685304081-de7947d419d0?q=80&w=800&auto=format&fit=crop" alt="Restaurant interior" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1541542684-6e0b03adf5aa?q=80&w=800&auto=format&fit=crop" alt="Chef plating" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Dish closeup" loading="lazy">
+      </div>
+    </section>
+
+    <section id="reserve" class="container reserve">
+      <h2>Reserve a Table</h2>
+      <form id="reserve-form" class="reserve-form" aria-label="Reservation form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Contact (phone or email)
+          <input type="text" name="contact" required>
+        </label>
+        <label>
+          Date
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          Time
+          <input type="time" name="time" required>
+        </label>
+        <label>
+          Party size
+          <input type="number" name="party" value="2" min="1" max="20" required>
+        </label>
+        <label class="full">
+          Notes
+          <textarea name="notes" rows="3" placeholder="Allergies, requests..."></textarea>
+        </label>
+        <button class="btn" type="submit">Send Request</button>
+        <div id="reserve-msg" aria-live="polite" class="reserve-msg"></div>
+      </form>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Mosaic Kitchen</h2>
+      <p>We celebrate African culinary traditions while exploring global techniques and seasonal produce. Our menu is curated to share and discover — perfect for groups and intimate dinners alike.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mosaic Kitchen — All rights reserved.</p>
+      <p class="muted">Images: Unsplash (for portfolio use) — swap with your own photos before publishing.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
