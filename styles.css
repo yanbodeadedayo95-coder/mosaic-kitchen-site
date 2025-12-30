@@ -14,7 +14,8 @@
   box-sizing:border-box;
   }
 body {
-  margin:0;background:var(--neutral);
+  margin:0;
+  background:var(--neutral);
   color:var(--deep);
   line-height:1.45
 }
