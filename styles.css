@@ -161,9 +161,10 @@ body {
   padding:2rem 0;
 }
 .gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-  gap:.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .5rem;
+  padding: 0 .5rem;   /* keeps images from touching screen edges */
 }
 .gallery-grid img{
   width:100%;
