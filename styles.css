@@ -136,13 +136,13 @@ section{
   position:relative;
   display:inline-block;
   min-height:1.3em;
-  color:transparent
+  color:#fff
 }
 .text span{
   position:absolute;
   left:0;
   top:0;
-  white-space:nowrap;
+  
   opacity:0;
   transform:translateY(8px);
   animation:rotatePhrase 12s linear infinite
