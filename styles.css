@@ -96,13 +96,7 @@ section{
   }
 }
 
-/* =========================================================
-   HERO BANNER – AFRICAN FLAVOURS
-   – Flex-centres everything vertically & horizontally
-   – Background image with dark overlay for contrast
-   – h1 uses clamp() for fluid type (no media queries)
-   – .btn is our green accent CTA
-   ========================================================= */
+/* ---------- HERO ---------- */
 .hero {
   background: #000 url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop') center/cover;
   display: flex;
@@ -118,18 +112,19 @@ section{
   width: 100%;
   background: rgba(0, 0, 0, .45);
   padding: 2rem;
-  border-radius: var(--radius);
+  border-radius: 10px;
 }
 .hero h1 {
   font-size: clamp(2.5rem, 8vw + 1rem, 5rem);
   margin: .2rem 0;
+  text-align: center;
 }
 .lead {
   margin: .5rem 0 1.5rem;
   font-size: 1.1rem;
 }
 .btn {
-  background: var(--accent);
+  background: #2F855A;
   color: #fff;
   padding: .6rem 1.2rem;
   border-radius: 8px;
@@ -138,52 +133,36 @@ section{
   font-weight: 600;
 }
 
-/* =========================================================
-   ROTATING HEADLINE – “FLAVOURS / HERITAGE / TRADITION / INNOVATION”
-   – Parent (.text) reserves vertical space & centres inline
-   – Each span is absolutely positioned so it can fade without moving layout
-   – left: 50% + translateX(-50%) = dead-centre horizontal anchor
-   – 12 s loop, 4 phrases, 3 s each, non-overlapping key-frames
-   – Reduced-motion media-query drops to first phrase only
-   ========================================================= */
+/* ---------- ROTATING TEXT ---------- */
 .text {
   position: relative;
   display: inline-block;
-  min-height: 1.3em;          /* keeps h1 height steady while phrases swap */
-  color: #fff;                /* visible colour (was transparent) */
-  text-align: center;         /* centre inline children */
-  white-space: normal;        /* allow wrap on very small screens */
-}
-
-.text span {
-  position: absolute;         /* remove from flow → no layout jump */
-  left: 50%;                  /* anchor to centre of parent */
-  top: 0;
-  transform: translateX(-50%); /* pull back by half its own width → truly centred */
-  opacity: 0;
-  animation: rotatePhrase 12s linear infinite;
-  pointer-events: none;       /* clicks pass through */
+  min-height: 1.3em;
   color: #fff;
-  z-index: 2;
 }
-
-/* stagger start times – 4 phrases = 25 % offset each */
+.text span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  white-space: nowrap;
+  animation: rotatePhrase 12s linear infinite;
+  color: #fff;
+}
 .text span:nth-child(1) { animation-delay: 0s; }
 .text span:nth-child(2) { animation-delay: 3s; }
 .text span:nth-child(3) { animation-delay: 6s; }
 .text span:nth-child(4) { animation-delay: 9s; }
-
 @keyframes rotatePhrase {
-  0%, 25%  { opacity: 0; transform: translateX(-50%) translateY(6px); }
-  5%, 20%  { opacity: 1; transform: translateX(-50%) translateY(0); }   /* visible window */
-  25.1%, 100% { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  0%, 25%  { opacity: 0; transform: translate(-50%, 6px); }
+  5%, 20%  { opacity: 1; transform: translate(-50%, 0); }
+  25.1%, 100% { opacity: 0; transform: translate(-50%, -6px); }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .text span { animation: none; opacity: 0; }
-  .text span:nth-child(1) { opacity: 1; position: static; } /* show only first phrase */
-  }
-/* ---------- MENU ---------- */
+  .text span:nth-child(1) { opacity: 1; position: static; }
+}/* ---------- MENU ---------- */
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
