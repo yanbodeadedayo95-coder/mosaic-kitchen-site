@@ -1,133 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mosaic Kitchen — Reserve a table</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mosaic Kitchen – Flavours of Africa</title>
+  <meta name="description" content="Authentic African tastes meet modern technique. Reserve a table today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
+    <div class="header-inner">
+      <div>
         <h1 class="logo">Mosaic Kitchen</h1>
-        <p class="tagline">Reserve a table — dinner starts here.</p>
+        <p class="tagline">Flavours of Africa</p>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
+      <button id="nav-toggle" aria-label="open navigation" aria-expanded="false">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <nav class="main-nav">
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
         <a href="#reserve">Reserve</a>
-        <a href="#about">About</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner container">
-        <h2 class="text">
-          Mosaic Kitchen
-          <span>Flavors of Africa</span>
-          <span>Authentic African Flavours</span>
-          <span>Kitchen Mosaic</span>
-          <span>Heritage On Plate</span>
-        </h2>
-        <p class="lead">Seasonal ingredients. Bold, balanced flavors. Welcome to Mosaic Kitchen.</p>
-        <a class="btn" href="#reserve">Reserve a Table</a>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>
+        Authentic African<br>
+        <span class="text">
+          <span>Flavours</span>
+          <span>Heritage</span>
+          <span>Tradition</span>
+          <span>Innovation</span>
+        </span><br>
+        On Plate
+      </h1>
+      <p class="lead">Seasonal ingredients. Bold, balanced flavours. Welcome to Mosaic Kitchen.</p>
+      <a href="#reserve" class="btn">Reserve a Table</a>
+    </div>
+  </section>
 
-    <section id="menu" class="container menu-section">
-      <h2>Featured Dishes</h2>
-      <div class="menu-grid">
-        <article class="menu-card">
-          <img src="https://media.istockphoto.com/id/2211866029/photo/fried-salmon-steak-with-boiled-potatoes-and-sauerkraut-served-on-white-plate-on-wooden.jpg?s=612x612&w=0&k=20&c=R2pc-qWKzKfbZaXEl66Y2QEuej5YlEzE50G7l5GLcBY=" alt="Grilled fish with sides">
-          <div class="card-body">
-            <h3>Grilled Suya Salmon</h3>
-            <p class="muted">Charred salmon with West African suya spice, citrus slaw.</p>
-            <div class="meta"><span class="price">$18.50</span><span class="tag">Main</span></div>
+  <section id="menu" class="menu-section container">
+    <h2>Featured Dishes</h2>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=60" alt="Grilled Suya Salmon">
+        <div class="card-body">
+          <h3>Grilled Suya Salmon</h3>
+          <p class="muted">Charred salmon with West-African suya spice, citrus slaw.</p>
+          <div class="meta">
+            <span class="price">$18.50</span>
+            <span class="tag">Main</span>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="menu-card">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" alt="Mushroom risotto">
-          <div class="card-body">
-            <h3>Truffle Mushroom Risotto</h3>
-            <p class="muted">Creamy arborio, local mushrooms, parmesan crumble.</p>
-            <div class="meta"><span class="price">$15.00</span><span class="tag">Main</span></div>
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=60" alt="Truffle Mushroom Risotto">
+        <div class="card-body">
+          <h3>Truffle Mushroom Risotto</h3>
+          <p class="muted">Creamy arborio, local mushrooms, parmesan crumble.</p>
+          <div class="meta">
+            <span class="price">$15.00</span>
+            <span class="tag">Main</span>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="menu-card">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Caprese salad">
-          <div class="card-body">
-            <h3>Tomato & Mozzarella Mosaic</h3>
-            <p class="muted">Heirloom tomatoes, buffalo mozzarella, basil oil, balsamic.</p>
-            <div class="meta"><span class="price">$9.50</span><span class="tag">Starter</span></div>
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=60" alt="Tomato & Mozzarella Mosaic">
+        <div class="card-body">
+          <h3>Tomato & Mozzarella Mosaic</h3>
+          <p class="muted">Heirloom tomatoes, buffalo mozzarella, basil oil, balsamic.</p>
+          <div class="meta">
+            <span class="price">$9.50</span>
+            <span class="tag">Starter</span>
           </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <section id="gallery" class="container gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://media.istockphoto.com/id/1084572788/photo/3d-render-of-luxury-restaurant.jpg?s=612x612&w=0&k=20&c=qGxC0jvu17bspV4CFcwyAvFvyGMeGZdigRsCYbwfoZM=" alt="Restaurant interior" loading="lazy">
-        <img src="https://media.istockphoto.com/id/1616038323/photo/cook-pouring-thousand-island-dressing.jpg?s=612x612&w=0&k=20&c=6TcG9M6QmHqoKSVxw_8Wahr16RgXelghqqiqDvg-7W8=" alt="Chef plating" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Dish closeup" loading="lazy">
-      </div>
-    </section>
+  <section id="gallery" class="gallery container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1603073163308-9654c3fb70b5?auto=format&fit=crop&w=800&q=60" alt="">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a05835626b?auto=format&fit=crop&w=800&q=60" alt="">
+      <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=60" alt="">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60" alt="">
+      <img src="https://images.unsplash.com/photo-1498837726019-d72155d782bb?auto=format&fit=crop&w=800&q=60" alt="">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=800&q=60" alt="">
+    </div>
+  </section>
 
-    <section id="reserve" class="container reserve">
-      <h2>Reserve a Table</h2>
-      <form id="reserve-form" class="reserve-form" aria-label="Reservation form">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Contact (phone or email)
-          <input type="text" name="contact" required>
-        </label>
-        <label>
-          Date
-          <input type="date" name="date" required>
-        </label>
-        <label>
-          Time
-          <input type="time" name="time" required>
-        </label>
-        <label>
-          Party size
-          <input type="number" name="party" value="2" min="1" max="20" required>
-        </label>
-        <label class="full">
-          Notes
-          <textarea name="notes" rows="3" placeholder="Allergies, requests..."></textarea>
-        </label>
-        <button class="btn" type="submit">Send Request</button>
-        <div id="reserve-msg" aria-live="polite" class="reserve-msg"></div>
-      </form>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>About Mosaic Kitchen</h2>
-      <p>We celebrate African culinary traditions while exploring global techniques and seasonal produce. Our menu is curated to share and discover — perfect for groups and intimate dinners alike.</p>
-    </section>
-  </main>
+  <section id="reserve" class="reserve container">
+    <h2>Reserve a Table</h2>
+    <form class="reserve-form" onsubmit="alert('Reservation received! We will email you shortly.');return false">
+      <label>Name *
+        <input type="text" required>
+      </label>
+      <label>Email *
+        <input type="email" required>
+      </label>
+      <label>Phone
+        <input type="tel">
+      </label>
+      <label>Date *
+        <input type="date" required>
+      </label>
+      <label>Time *
+        <select required>
+          <option value="">Pick time</option>
+          <option>17:00</option><option>17:30</option><option>18:00</option>
+          <option>18:30</option><option>19:00</option><option>19:30</option>
+          <option>20:00</option><option>20:30</option><option>21:00</option>
+        </select>
+      </label>
+      <label>Guests *
+        <select required>
+          <option value="">No.</option><option>1</option><option>2</option>
+          <option>3</option><option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8+</option>
+        </select>
+      </label>
+      <label class="full">Special Requests
+        <textarea rows="3"></textarea>
+      </label>
+      <button type="submit">Confirm Reservation</button>
+    </form>
+  </section>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Mosaic Kitchen — All rights reserved.</p>
-      <p class="muted">Image Courtesy Of <a href="https://unsplash.com" target="_blank" rel="noopener" style="text-decoration: none;">Unsplash</a></p>
-      <p class="muted">Developed By <a href="https://github.com/yanbodeadedayo95-coder" target="_blank" rel="noopener" style="text-decoration: none;" >Yanbodeadedayo95-coder { Github } </a></p>
-    </div>
+    © <span id="yr"></span> Mosaic Kitchen – Flavours of Africa
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
-</html>
+  </html>
