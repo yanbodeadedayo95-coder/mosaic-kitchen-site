@@ -1,9 +1,11 @@
-// Minimal client-side reservation handler (demo only)
-document.getElementById('year').textContent = new Date().getFullYear();
-const form = document.getElementById('reserve-form');
-const msg = document.getElementById('reserve-msg');
-form?.addEventListener('submit', e => {
-  e.preventDefault();
-  msg.textContent = 'Reservation request sent — we will contact you to confirm.';
-  form.reset();
+// Mobile nav toggle
+const btn  = document.getElementById('nav-toggle');
+const nav  = document.querySelector('.main-nav');
+
+btn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
 });
+
+// Current year in footer
+document.getElementById('yr').textContent = new Date().getFullYear();
